@@ -163,8 +163,8 @@ module controldb './modules/sqldb.bicep' = {
      ad_admin_sid:  kv_ref.getSecret('sqlserver-ad-admin-sid')  
      auto_pause_duration: 60
      database_sku_name: 'GP_S_Gen5_1' 
-     enable_purview: enable_purview
-     purview_resource: enable_purview ? purview.outputs.purview_resource : {}
+     //enable_purview: enable_purview
+     //purview_resource: enable_purview ? purview.outputs.purview_resource : {}
      audit_storage_name: audit_integration.outputs.audit_storage_uniquename
      auditrg: audit_rg.name
   }
